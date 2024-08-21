@@ -17,3 +17,7 @@ export {
   // SearchInput,
   // EmptyState,
 }
+
+// umowa zlecenie, umowa o prace na czas nieokreślony - od 4 do 6 miesięcy.
+// umowa zlecenie - nie wiadomo jak z wolnym
+// umowa o prace - są dni wolne.
