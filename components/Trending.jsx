@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { ResizeMode, Video } from "expo-av"
-// import * as Animatable from "react-native-animatable"
+import * as Animatable from "react-native-animatable"
 import {
-  View,
   FlatList,
   Image,
   ImageBackground,
@@ -33,7 +32,11 @@ const TrendingItem = ({ activeItem, item }) => {
   const [play, setPlay] = useState(false)
 
   return (
-    <View className="mr-5" duration={500}>
+    <Animatable.View
+      className="mr-5"
+      animation={activeItem === item.$id ? zoomIn : zoomOut}
+      duration={500}
+    >
       {play ? (
         <Video
           source={{ uri: item.video }}
@@ -68,7 +71,7 @@ const TrendingItem = ({ activeItem, item }) => {
           />
         </TouchableOpacity>
       )}
-    </View>
+    </Animatable.View>
   )
 }
 
